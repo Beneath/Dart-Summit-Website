@@ -1,0 +1,9 @@
+{
+  "name": "GoogleDartSummitWebsite",
+  "version": "1.0.0",
+  "author": "Beneath",
+  "dependencies": {},
+  "devDependencies": {
+    "jQuery": "^2.2.3"
+  }
+}

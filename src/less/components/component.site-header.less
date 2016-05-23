@@ -1,0 +1,93 @@
+/**
+ * Component: Site header
+ */
+
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 50px;
+    z-index: 3;
+    .fadeIn(2.0s);
+}
+
+.logo {
+    display: block;
+    color: @color-white;
+    text-decoration: none;
+    position: relative;
+    float: left;
+    .clearfix();
+    .user-select(none);
+
+    &:hover,
+    &:focus {color: @color-white;}
+
+    &__element {
+        float: left;
+        margin-right: 10px;
+        position: relative;
+        width: 170px;
+    }
+
+    &__text {
+        float: left;
+        padding-left: 4px;
+        padding-top: 22px;
+        .textshadow();
+    }
+
+    &__type {
+        clear:both;
+        display: block;
+        font-weight: 300;
+        font-size: 23px;
+        padding-left: 54px;
+        .textshadow();
+    }
+
+    &__year {
+        display: block;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 1;
+        padding-left: 4px;
+        .textshadow();
+    }
+}
+
+.site-navigation {
+    float: right;
+    margin-top: 20px;
+    margin-right: 25px;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    &__link {
+        display: block;
+        color: @color-white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 5px;
+        .transition(all .3s);
+        .textshadow();
+
+        &:hover {
+            padding-bottom: 0;
+            color: @color-white;
+            border-color: @color-white;
+        }
+    }
+}
