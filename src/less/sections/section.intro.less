@@ -28,10 +28,20 @@
 .intro-content {
     color: @color-white;
     position: relative;
+
+    display: -moz-flex;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-flex-direction: column;
+    -moz-align-items: center;
+    -moz-justify-content: center;
+    -moz-flex-direction: column;
+
     z-index: 1000;
 
     &__inner {padding-top: 170px;}

@@ -7,6 +7,7 @@ var gd = gd || {};
 gd.intro = new function(){
 
     this.init = function() {
+
         $('#js-intro__media').logosDistort({
             effectWeight: 0.6,
             outerBuffer: 1.08,

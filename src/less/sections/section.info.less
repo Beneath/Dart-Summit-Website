@@ -4,21 +4,25 @@
 
 .info {
     background: @color-gray-lightest;
-    padding: 40px 40px 20px;
+    padding: 40px 0 20px;
 
     @media (min-width:@screen-sm) {
-        padding: 70px 70px 50px;
+        padding: 70px 0 50px;
     }
 }
 
 
 .info-list {
+    display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 }
 
 .info-item {
     padding: 20px;
+    float: left;
+
 
     @media (min-width:@screen-xs) {width: 50%;}
     @media (min-width:@screen-sm) {width: 33%;}
