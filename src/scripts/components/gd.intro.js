@@ -5,9 +5,8 @@
 var gd = gd || {};
 
 gd.intro = new function(){
-    var self = this;
 
-    this.init = function(selector) {
+    this.init = function() {
         $('#js-intro__media').logosDistort({
             effectWeight: 0.6,
             outerBuffer: 1.08,
@@ -15,6 +14,7 @@ gd.intro = new function(){
             perspectiveMulti: 1.0,
             enableSmoothing: true
         });
-    };
 
+        $('#intro').addClass('js-fade-in');
+    };
 };

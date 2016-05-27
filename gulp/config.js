@@ -127,6 +127,7 @@ module.exports = (function () {
             ignorePlugins: ["jscs"],
             scripts: [
                 bowerPath + "jQuery/dist/jquery.min.js",
+                bowerPath + "jquery.easing/js/jquery.easing.min.js",
                 srcPath + "scripts/**/*.js"
             ],
             templates: [srcPath + "templates/**/*"],

@@ -41,22 +41,22 @@
             <nav class="site-navigation">
                 <ul class="site-navigation__list">
                     <li class="site-navigation__item">
-                        <a href="#" class="site-navigation__link">Speakers</a>
+                        <a href="#speakers" class="site-navigation__link">Speakers</a>
                     </li>
                     <li class="site-navigation__item">
-                        <a href="#" class="site-navigation__link">Location</a>
+                        <a href="#location" class="site-navigation__link">Location</a>
                     </li>
                     <li class="site-navigation__item">
-                        <a href="#" class="site-navigation__link">Get tickets</a>
+                        <a href="#tickets" class="site-navigation__link">Get tickets</a>
                     </li>
                     <li class="site-navigation__item">
-                        <a href="#" class="site-navigation__link">Info</a>
+                        <a href="#info" class="site-navigation__link">Info</a>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <section class="intro">
+        <section id="intro" class="intro">
             <div id="js-intro__media" class="intro__media">
                 <img class="intro__image" src="images/intro-bg-image.jpg">
                 <img class="intro__image" src="images/intro-bg.png">
@@ -66,13 +66,17 @@
                         <span class="intro-content__subline">2 days. 8 talks</span>
                         <span class="intro-content__date">26-27 October</span>
                         <span class="intro-content__location">Munich, Germany</span>
-                        <button class="intro-content__button"><svg class="icon icon--arrow-down"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons/icons.svg#icon--arrow"></use></svg></button>
+                        <a href="#speakers" class="intro-content__button">
+                            <svg class="icon icon--arrow-down">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons/icons.svg#icon--arrow"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="speakers">
+        <section id="speakers" class="speakers">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-header__title">Speakers</h2>
@@ -195,7 +199,7 @@
             </div>
         </section>
 
-        <section class="location">
+        <section id="location" class="location">
             <div class="location-content">
                 <div class="location-content__inner">
                     <figure class="location-content__logo">
@@ -208,7 +212,7 @@
             </div>
         </section>
 
-        <section class="tickets">
+        <section id="tickets" class="tickets">
             <div class="container">
                 <header class="section-header">
                     <h2 class="section-header__title">Get your tickets now</h2>
@@ -221,7 +225,7 @@
             </div>
         </section>
 
-        <section class="info">
+        <section id="info" class="info">
             <div class="container">
                 <header class="section-header">
                     <h2 class="section-header__title">Practical information</h2>

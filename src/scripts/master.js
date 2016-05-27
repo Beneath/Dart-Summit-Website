@@ -1,6 +1,6 @@
 /*!
 
-Google Dart - Website 2016
+Google Dart Developer Summit 2016 - Website
 ____ ____ __ _ ____  __ ____ _  _
 (  _ (  __(  ( (  __)/ _(_  _/ )( \
 ) _ () _)/    /) _)/    \)( ) __ (
@@ -22,4 +22,5 @@ var gd = gd || {};
  */
 $(function() {
     gd.intro.init();
+    gd.navigation.init();
 });
