@@ -3,11 +3,9 @@
  */
 
 .intro {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
+    height: 100vh;
 
     &__media {
         position: absolute;
@@ -21,33 +19,40 @@
 
 .intro-content {
     color: @color-white;
-    padding-top: 100px;
     position: relative;
-    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+
+    &__inner {padding-top: 170px;}
+
+    @media (min-width:@screen-sm) {&__inner {padding-top: 150px;}}
 
     &__title {
         margin-top: 0;
+        margin-bottom: 0;
         line-height: 1;
         .textshadow();
-        margin-bottom: 10px;
-        .fadeIn(.8s);
+        .fadeIn(1.2s);
 
-        @media (min-width:@screen-sm) {margin-bottom: 20px;}
+        @media (min-width:@screen-xl) {margin-bottom: 20px;}
     }
 
     &__subline {
         display: block;
         font-weight: 300;
         line-height: 1;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         .textshadow();
         font-size: 40px;
-        .fadeIn(1.0s);
+        .fadeIn(1.4s);
 
         @media (min-width:@screen-sm) {font-size: 50px;}
         @media (min-width:@screen-md) {font-size: 60px;}
-        @media (min-width:@screen-lg) {font-size: 80px;}
-        @media (min-width:@screen-xl) {font-size: 100px;}
+        @media (min-width:@screen-lg) {font-size: 70px;}
+        @media (min-width:@screen-xl) {font-size: 80px;}
     }
 
     &__date {
@@ -57,7 +62,7 @@
         line-height: 1;
         margin-bottom: 7px;
         .textshadow();
-        .fadeIn(1.6s);
+        .fadeIn(2.0s);
     }
 
     &__location {
@@ -67,7 +72,7 @@
         line-height: 1;
         margin-bottom: 37px;
         .textshadow();
-        .fadeIn(1.6s);
+        .fadeIn(2.0s);
     }
 
     &__button {
@@ -75,13 +80,46 @@
         border: 0;
         padding: 0;
         margin: 0;
-        .rotate(90deg);
-        .fadeIn(2.0s);
+        line-height: 1;
+        width: 48px;
+        height: 48px;
+        position: relative;
+        .fadeIn(2.4s);
 
         .icon {
             width: 48px;
             height: 48px;
+            position: relative;
+            z-index: 3;
+        }
+
+        &:before {
+            content: "";
+            border: 2px solid transparent;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            border-radius: 30px;
+            width: calc(~"100% - 12px");
+            height: calc(~"100% - 12px");
+            .transition(all .3s);
+        }
+
+        &:hover,
+        &:focus,
+        &.focus {
+            outline: none;
+            color: @color-secondary;
+            background: transparent;
+            text-decoration: none;
+
+            &:before {
+                top: -4px;
+                left: -4px;
+                width: calc(~"100% + 8px");
+                height: calc(~"100% + 8px");
+                background: @color-white;
+            }
         }
     }
 }
-

@@ -9,58 +9,38 @@
     width: 100%;
     padding: 25px 50px;
     z-index: 3;
-    .fadeIn(2.0s);
+    .fadeIn(2.4s);
 }
 
 .logo {
     display: block;
-    color: @color-white;
     text-decoration: none;
     position: relative;
-    float: left;
     .clearfix();
     .user-select(none);
+    width: 100%;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
 
-    &:hover,
-    &:focus {color: @color-white;}
-
-    &__element {
+    @media (min-width:@screen-sm) {
+        max-width: 220px;
+        margin: 0;
         float: left;
-        margin-right: 10px;
-        position: relative;
-        width: 170px;
     }
 
-    &__text {
-        float: left;
-        padding-left: 4px;
-        padding-top: 22px;
-        .textshadow();
-    }
-
-    &__type {
-        clear:both;
-        display: block;
-        font-weight: 300;
-        font-size: 23px;
-        padding-left: 54px;
-        .textshadow();
-    }
-
-    &__year {
-        display: block;
-        font-weight: 500;
-        font-size: 23px;
-        line-height: 1;
-        padding-left: 4px;
-        .textshadow();
-    }
+    @media (min-width:@screen-md) {max-width: 260px;}
 }
 
 .site-navigation {
-    float: right;
-    margin-top: 20px;
-    margin-right: 25px;
+    display: none;
+
+    @media (min-width:@screen-sm) {
+        display: block;
+        float: right;
+        margin-top: 60px;
+        margin-right: 25px;
+    }
 
     &__list {
         margin: 0;
@@ -84,6 +64,7 @@
         .transition(all .3s);
         .textshadow();
 
+        &:focus,
         &:hover {
             padding-bottom: 0;
             color: @color-white;

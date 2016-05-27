@@ -15,13 +15,11 @@ People behind:         Lars Hesselberg, @hesselberg
 /**
  * Initialize main objects
  */
-var gds = gds || {};
+var gd = gd || {};
 
 /**
- * DOM loaded, fire javascript
+ * DOM ready
  */
-document.addEventListener("DOMContentLoaded", function(event) {
-    $('#js-intro__media').logosDistort({
-        effectWeight: 0.6
-    });
+$(function() {
+    gd.intro.init();
 });

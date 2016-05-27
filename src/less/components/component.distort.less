@@ -17,7 +17,6 @@
 .ld-smart-container .ld-3d-parent {
     width: 100%;
     height: 100%;
-    pointer-events: none;
     transform-style: preserve-3d;
     perspective: 9000px;
     opacity: 1;
@@ -26,19 +25,17 @@
 
 .ld-smart-container .ld-transform-target {
     position: relative;
-    -webkit-transform-style: flat;
+    -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0px, 0px, 0px);
     width: 100%;
     height: 100%;
-    pointer-events: none;
     transform-style: preserve-3d;
 }
 
 .ld-smart-container .ld-3d-object {
     position: absolute;
-    pointer-events: none;
-    -webkit-transform-style: flat;
+    -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0px, 0px, 0px);
     transform-style: preserve-3d;

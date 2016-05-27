@@ -1,0 +1,35 @@
+/**
+ * Section: Practical information
+ */
+
+.info {
+    background: @color-gray-lightest;
+    padding: 40px 40px 20px;
+
+    @media (min-width:@screen-sm) {
+        padding: 70px 70px 50px;
+    }
+}
+
+
+.info-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    padding: 20px;
+
+    @media (min-width:@screen-xs) {width: 50%;}
+    @media (min-width:@screen-sm) {width: 33%;}
+
+    &__question {
+        display: block;
+        font-weight: 600;
+    }
+
+    &__answer {
+        display: block;
+    }
+}
+

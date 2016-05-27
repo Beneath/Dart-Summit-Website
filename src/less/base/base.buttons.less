@@ -42,46 +42,57 @@
     & {
         font-weight: 400;
         font-family: @base-font-family;
-        .transition(background .2s);
-        padding: 12px 22px;
-        border-radius: 100px;
-        color: @color-text;
-        background: @color-primary;
-        border: 1px solid transparent;
-
-        &:hover,
-        &:focus,
-        &.focus {
-            color: @color-text;
-            background: darken(@color-primary, 10%);
-            text-decoration: none;
-        }
-    }
-
-    // Secondary button
-    &--secondary {
+        padding: 9px 42px;
+        border-radius: 30px;
         color: @color-white;
         background: @color-secondary;
+        border: 1px solid transparent;
+        .transition(all .3s);
+
+        &:before {
+            content: "";
+            border: 2px solid transparent;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            border-radius: 30px;
+            width: calc(~"100% - 12px");
+            height: calc(~"100% - 12px");
+            .transition(all .3s);
+        }
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-white;
-            background: darken(@color-secondary, 10%);
+            color: @color-secondary;
+            background: transparent;
+            text-decoration: none;
+
+            &:before {
+                top: -2px;
+                left: -2px;
+                width: calc(~"100% + 4px");
+                height: calc(~"100% + 4px");
+                border-color: @color-secondary;
+            }
         }
     }
 
-    // Ghost button
-    &--ghost {
-        color: @color-secondary;
-        background: transparent;
-        border-color: @color-secondary;
+    // Large button
+    &--large {
+        font-size: 24px;
+        border-radius: 40px;
+        padding: 9px 62px;
 
-        &:hover,
-        &:focus,
-        &.focus {
+        &:before {border-radius: 40px;}
+    }
+
+    // secondary button
+    &--secondary {
+        &:hover {
             color: @color-white;
-            background: @color-secondary;
+
+            &:before {border-color: @color-white;}
         }
     }
 }
