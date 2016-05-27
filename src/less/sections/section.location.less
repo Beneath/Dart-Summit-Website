@@ -8,6 +8,10 @@
     height: 100vh;
     max-height: 900px;
     position: relative;
+    color: @color-white;
+    padding: 40px 0;
+
+    @media (min-width:@screen-sm) {padding: 70px 0;}
 }
 
 
@@ -25,7 +29,9 @@
 
     &__inner {
         text-align: center;
-        padding-top: 150px;
+        padding-top: 200px;
+
+        @media (min-width:@screen-xl) {padding-top: 250px;}
     }
 
     &__logo {
