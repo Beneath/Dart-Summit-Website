@@ -11,6 +11,17 @@
     }
 }
 
+.info-description {
+    padding: 20px;
+    margin-bottom: 30px;
+
+    &__question {
+        display: block;
+        font-weight: 600;
+    }
+
+    &__answer {display: block;}
+}
 
 .info-list {
     display: -webkit-flex;
@@ -23,9 +34,7 @@
     padding: 20px;
     float: left;
 
-
     @media (min-width:@screen-xs) {width: 50%;}
-    @media (min-width:@screen-sm) {width: 33%;}
 
     &__question {
         display: block;
@@ -34,4 +43,3 @@
 
     &__answer {display: block;}
 }
-
